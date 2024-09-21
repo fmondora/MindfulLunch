@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meditazione del Giorno</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            text-align: center;
+            background-color: #f0f4c3;
+            color: #4a4a4a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
+            background-image: url('https://www.transparenttextures.com/patterns/gplay.png');
+        }
+        .container {
+            max-width: 600px;
+            padding: 40px;
+            border-radius: 15px;
+            background-color: rgba(255, 255, 255, 0.85);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+        }
+        .icon {
+            font-size: 3em;
+            margin-bottom: 20px;
+            color: #4caf50;
+        }
+        .word {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #3b3b3b;
+            margin-bottom: 10px;
+        }
+        .meditation {
+            font-size: 1.4em;
+            font-style: italic;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        .button {
+            margin-top: 20px;
+            padding: 12px 24px;
+            font-size: 1.1em;
+            color: white;
+            background-color: #4caf50;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover {
+            background-color: #388e3c;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+            .icon {
+                font-size: 2.5em;
+            }
+            .word {
+                font-size: 2em;
+            }
+            .meditation {
+                font-size: 1.2em;
+            }
+            .button {
+                padding: 10px 20px;
+                font-size: 1em;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="icon" id="icon"><i class="fas fa-leaf"></i></div>
+        <div class="word" id="word">Caricamento...</div>
+        <div class="meditation" id="meditation">Caricamento...</div>
+        <button class="button" onclick="generateRandomMeditation()">Nuova Meditazione</button>
+    </div>
+    
+    <!-- Collega il file JS esterno -->
+    <script src="meditazioni.js"></script>
+</body>
+</html>
